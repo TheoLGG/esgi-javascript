@@ -15,7 +15,13 @@ function capitalize(str) {
 
 
 function camelCase(str) {
-
+    if (typeof str !== "string" || str.length === 0) return "";
+    str = str.replace("_", " ");
+    const array = str.toLowerCase().split(" ");
+    for (let i = 0; i < array.length;) {
+        array[i] = ucfirst(array[i++]);
+    }
+    return array.join("");
 }
 
 
