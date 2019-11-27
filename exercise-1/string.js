@@ -17,7 +17,7 @@ function capitalize(str) {
 function camelCase(str) {
     if (typeof str !== "string" || str.length === 0) return "";
     for (let j = 0; j < str.length; j++) {
-        str = str.replace(/[^A-Za-z]/, "");
+        str = str.replace(/[^A-Za-z0-9]/gi, " ");
     }
     const array = str.toLowerCase().split(" ");
     for (let i = 0; i < array.length;) {
