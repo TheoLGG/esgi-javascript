@@ -14,23 +14,10 @@ function capitalize(str) {
 }
 
 
-// function camelCase(str) {
-//     if (typeof str !== "string" || str.length === 0) return "";
-//     const array = str.toLowerCase().split(" ");
-//     var re = new RegExp("(?:_))", "g");
-//     for (let i = 0; i < array.length;) {
-//         array[i] = re.exec(array[i++]);
-//     }
-//     return array.split("");
-// }
+function camelCase(str) {
 
-// console.log(camelCase('tést_test'));
-// console.log(camelCase('Test_test'));
-// console.log(camelCase('3est_test'));
-// console.log(camelCase('rest_rezf'));
-// console.log(camelCase(''));
-// console.log(camelCase(null));
-// console.log(camelCase({}));
+}
+
 
 function snake_case(str) {
     if (typeof str !== "string" || str.length === 0) return "";
