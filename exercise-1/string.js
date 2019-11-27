@@ -3,13 +3,6 @@ function ucfirst(str) {
     return str[0].toUpperCase() + str.substring(1);
 }
 
-console.log(ucfirst('test'));
-console.log(ucfirst('Test'));
-console.log(ucfirst('3est'));
-console.log(ucfirst('rest rezf'));
-console.log(ucfirst(''));
-console.log(ucfirst(null));
-console.log(ucfirst({}));
 
 function capitalize(str) {
     if (typeof str !== "string" || str.length === 0) return "";
@@ -20,42 +13,67 @@ function capitalize(str) {
     return array.join(" ");
 }
 
-console.log(capitalize('test test'));
-console.log(capitalize('Test test'));
-console.log(capitalize('3est test'));
-console.log(capitalize('rest rezf'));
-console.log(capitalize(''));
-console.log(capitalize(null));
-console.log(capitalize({}));
 
-function camelCase(str) {
-    if (typeof str !== "string" || str.length === 0) return "";
-    const array = str.toLowerCase().split(" ");
-    for (let i = 0; i < array.length;) {
-        array[i] = ucfirst(array[i++]);
-    }
-    return array.join("");
-}
+// function camelCase(str) {
+//     if (typeof str !== "string" || str.length === 0) return "";
+//     const array = str.toLowerCase().split(" ");
+//     var re = new RegExp("(?:_))", "g");
+//     for (let i = 0; i < array.length;) {
+//         array[i] = re.exec(array[i++]);
+//     }
+//     return array.split("");
+// }
 
-console.log(camelCase('tést test'));
-console.log(camelCase('Test test'));
-console.log(camelCase('3est test'));
-console.log(camelCase('rest rezf'));
-console.log(camelCase(''));
-console.log(camelCase(null));
-console.log(camelCase({}));
+// console.log(camelCase('tést_test'));
+// console.log(camelCase('Test_test'));
+// console.log(camelCase('3est_test'));
+// console.log(camelCase('rest_rezf'));
+// console.log(camelCase(''));
+// console.log(camelCase(null));
+// console.log(camelCase({}));
 
 function snake_case(str) {
     if (typeof str !== "string" || str.length === 0) return "";
-    const array = str.toLowerCase().toString().split(" ");
-    var reg = new RegExp("[ ._-]+", "g");
+    const array = str.toLowerCase().split(" ");
+    for (let i = 0; i < array.length;) {
+        array[i] = array[i++];
+    }
     return array.join("_");
 }
 
-console.log(snake_case('tést test'));
-console.log(snake_case('Test test'));
-console.log(snake_case('3est test'));
-console.log(snake_case('rest rezf'));
-console.log(snake_case(''));
-console.log(snake_case(null));
-console.log(snake_case({}))
+function prop_access() {
+
+}
+
+
+function leet(str) {
+    if (typeof str !== "string" || str.length === 0) return "";
+    let voyelle = ['a', 'e', 'i', 'o', 'u', 'y'];
+    let replace = ['4', '3', '1', '0', '(_)', '7'];
+    for (let j = 0; j < str.length; j++) {
+        for (let i = 0; i < voyelle.length; i++) {
+            str = str.replace(voyelle[i], replace[i]);
+        }
+    }
+    return str;
+}
+
+function verlan(str) {
+    if (typeof str !== "string" || str.length === 0) return "";
+    var array = str.split(" ");
+    for (let i = 0; i < array.length; i++) {
+        array[i] = array[i].split("").reverse().join("");
+    }
+    return array.join(" ");
+}
+
+
+
+function yoda(str) {
+    if (typeof str !== "string" || str.length === 0) return "";
+    return str.split(" ").reverse().join(" ");
+}
+
+function veg(str, key) {
+
+}
