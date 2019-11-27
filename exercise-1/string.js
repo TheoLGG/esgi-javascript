@@ -74,6 +74,6 @@ function yoda(str) {
     return str.split(" ").reverse().join(" ");
 }
 
-function veg(str, key) {
+function vig(str, key) {
 
 }
