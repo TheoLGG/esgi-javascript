@@ -78,6 +78,7 @@ function yoda(str) {
 }
 
 function vig(str, code) {
+    if (typeof str !== "string" || str.length === 0) return "";
     while (code.length < str.length) {
         code += code;
     }
