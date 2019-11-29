@@ -10,19 +10,19 @@ function type_check_v1(vari, type) {
 }
 
 function type_check_v2(vari, conf) {
-    // for(key in conf){
-    //     switch (key) {
-    //         case 'type':
-    //             if(!type_check_v1((vari,conf[key]))) return false;
-    //             break;
-    //         case 'value':
-    //             if(!type_check_v1((vari,conf[key]))) return false;
-    //             break;
-    //         case 'enum':
-    //             if(!type_check_v1((vari,conf[key]))) return false;
-    //             break;
-    //     }
-    // }
+    for(key in conf){
+        switch (key) {
+            case 'type':
+                if(!type_check_v1((vari,conf[key]))) return false;
+                break;
+            case 'value':
+                if(!type_check_v1((vari,conf[key]))) return false;
+                break;
+            case 'enum':
+                if(!type_check_v1((vari,conf[key]))) return false;
+                break;
+        }
+    }
 }
 
 function type_check() {
