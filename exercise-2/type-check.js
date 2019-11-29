@@ -1,16 +1,17 @@
-function type_check_v1(value, type) {
-    if (value == null && type == null || typeof value == undefined && type == undefined) {
-        return true;
-    }
-    if (typeof input === type) {
-        if (input === null && type === "object") {
-            return false
-        }
+function type_check_v1(type, check) {
+    if (typeof check !== "string" || !check) return false;
+    if (check === "object" && type === null) return false;
+    if (check === "null" && type === null) return true;
+    if (check === "array" && Array.isArray(type)) return true;
+    if (typeof type === check) {
         return true
-    }
-    if (type === "array" && input.constructor === Array ) {
-        return true
-    }
+    } else return false;
+}
 
-    return false
+function type_check_v2() {
+
+}
+
+function type_check_v3() {
+
 }
