@@ -1,12 +1,24 @@
-var state = ["normal","happy","sad","ready"];
-var type = ["moto","voiture"]
-function Vehicule(type) {
-    this.name = str;
-
-
-}
-function Pilote(str) {
-
-
-}
-var pilote = new Pilote();
+const p1 = new Pilote("Luigi");
+console.log('Turn 0');
+if(p1.needUpdate()) console.log(p1.speak());
+console.log('Turn 1');
+p1.receiveData({state: "normal"});
+if(p1.needUpdate()) console.log(p1.speak());
+console.log('Turn 2');
+p1.receiveData({state: "normal"});
+if(p1.needUpdate()) console.log(p1.speak());
+console.log('Turn 3');
+p1.receiveData({state: "happy"});
+if(p1.needUpdate()) console.log(p1.speak());
+console.log('Turn 4');
+p1.receiveData({state: "happy"});
+if(p1.needUpdate()) console.log(p1.speak());
+console.log('Turn 5');
+p1.receiveData({state: "normal"});
+if(p1.needUpdate()) console.log(p1.speak());
+console.log('Turn 6');
+p1.receiveData({state: "sad", origin: "Mario"});
+if(p1.needUpdate()) console.log(p1.speak());
+console.log('Turn 7');
+p1.receiveData({state: "normal"});
+if(p1.needUpdate()) console.log(p1.speak());
